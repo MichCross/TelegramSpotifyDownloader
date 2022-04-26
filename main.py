@@ -11,6 +11,12 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 with open("config.json", "r") as read_file:
     config = json.load(read_file)
 
+def start(update, context):
+    update.message.reply_text('''
+Hello dear 🍻
+Just send your link or name of the song you want and we will start the pross.
+use command /help to see instructions .
+''')
 
 def update_config():
     with open("config.json", "w") as write_file:
