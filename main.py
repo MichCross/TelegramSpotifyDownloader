@@ -29,6 +29,7 @@ except:
 
 updater = Updater(token)
 dispatcher = updater.dispatcher
+dispatcher.add_handler(telegram.ext.CommandHandler("start", start))
 
 def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
